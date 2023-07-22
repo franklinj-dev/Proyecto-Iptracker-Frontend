@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+     <link rel="stylesheet" href="./index.css" class="css">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi Rastreador</h1>
+
+    <input type="text" id="input-ip">
+    <button id="btnIP">Buscar IP</button>
+
+    <label for="">
+        IP ADRESS:
+        <p id="ip"></p>
+    </label>
+    <label for="">
+        LOCATION:
+        <p id="location"></p>
+    </label>
+    <label for="">
+        TIMEZONE:
+        <p id="timezone"></p>
+    </label>
+    <label for="">
+        ISP:
+        <p id="isp"></p>
+    </label>
+
+    <div id="map"></div>
+
+<script src="./geo.js"></script>
+</body>
+</html>
