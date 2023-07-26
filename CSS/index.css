@@ -1,0 +1,323 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Rubik;
+}
+
+
+
+.full-container{
+    display: flex;
+    justify-content: center;
+    width: 375px;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#map{
+    height: 100%;
+    width: 100%;
+}
+
+.banner-container{
+    background-image: url(/img/pattern-bg-mobile.png);
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container{
+    position: relative;
+}
+
+.ip-input{
+        margin: 0px;
+        padding-left: 20px;
+        outline: none;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        width: 250px;
+        color: hsl(0, 0%, 17%);
+        font-weight: 700;
+}
+
+.tittle{
+    
+    color: white;
+    font-weight: 400px;
+    letter-spacing: .5px;
+    font-size: 25px;
+}
+
+.btnIP{
+    background-color: black;
+    top: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    height: 42px;
+    width: 45px;
+    position: absolute;
+    transform: translateX(-100%);
+}
+
+.informacion-ip{
+    background-color: white;
+    width: 280px;
+    border-radius: 10px;
+    position: absolute;
+    top: 120px;
+    z-index: 999;
+    padding-top: 10px;
+  
+}
+
+.informacion-ip > label {
+    font-weight: 700;
+    font-size: 5px;
+    color: hsl(0, 0%, 59%);
+    
+}
+
+#ip{
+    color: hsl(0, 0%, 17%);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+#location{
+    color: hsl(0, 0%, 17%);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+#timezone{
+    color: hsl(0, 0%, 17%);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+#isp{
+    color: hsl(0, 0%, 17%);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+
+
+
+.map-container{
+    height: 70%;
+    width: 100%
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 999999999999;
+    text-align: center;
+    display: none; }
+    .modal .o {
+      width: 5%;
+      display: block;
+      position: absolute;
+      top: 35%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+      animation: rotate 2s infinite linear;
+      animation-play-state: paused; }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0); }
+    100% {
+      transform: rotate(360deg); } }
+  
+
+@media (min-width: 1024px){
+    body{
+        padding: 0;
+        margin: 0;
+        font-family: Rubik;
+    }
+    
+    
+    
+    .full-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    #map{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .banner-container{
+        background-image: url(/./img/pattern-bg-desktop.png);
+        width: 100%;
+        height: 30%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-container{
+        position: relative;
+    }
+    
+    .ip-input{
+            margin: 0px;
+            padding-left: 20px;
+            outline: none;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            width: 350px;
+            color: hsl(0, 0%, 17%);
+            font-weight: 700;
+    }
+    
+    .tittle{
+        
+        color: white;
+        font-weight: 400px;
+        letter-spacing: .5px;
+        font-size: 25px;
+    }
+    
+    .btnIP{
+        background-color: black;
+        top: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: none;
+        height: 42px;
+        width: 45px;
+        position: absolute;
+        transform: translateX(-100%);
+    }
+    
+    .informacion-ip{
+        background-color: white;
+        width: 80%;
+        height: 15%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        top: 130px;
+        z-index: 999;
+        margin-top: 30px;
+      
+    }
+    
+
+    .ip-tittle{
+        font-weight: 700;
+        font-size: 5px;
+        color: hsl(0, 0%, 59%);
+        border-right: solid hsl(0, 0%, 59%);
+        margin-top: 15px;
+        margin-bottom: 30px;
+        padding-right: 40px;
+        width: 100%;
+        text-align: start;
+        margin-left: 20px;
+    }
+
+    .location-tittle{
+        font-weight: 700;
+        font-size: 5px;
+        color: hsl(0, 0%, 59%);
+        border-right: solid hsl(0, 0%, 59%);
+        margin-top: 15px;
+        margin-bottom: 30px;
+        padding-right: 40px;
+        width: 100%;
+        text-align: start;
+        margin-left: 20px;
+    }
+
+    .timezone-tittle{
+        font-weight: 700;
+        font-size: 5px;
+        color: hsl(0, 0%, 59%);
+        border-right: solid hsl(0, 0%, 59%);
+        margin-top: 15px;
+        margin-bottom: 30px;
+        padding-right: 40px;
+        width: 100%;
+        text-align: start;
+        margin-left: 20px;
+    }
+
+    .isp-tittle{
+        font-weight: 700;
+        font-size: 5px;
+        color: hsl(0, 0%, 59%);
+        margin-top: 15px;
+        margin-bottom: 30px;
+        padding-right: 40px;
+        width: 100%;
+        text-align: start;
+        margin-left: 20px;
+    }
+    
+    #ip{
+        color: hsl(0, 0%, 17%);
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    
+    #location{
+        color: hsl(0, 0%, 17%);
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    
+    #timezone{
+        color: hsl(0, 0%, 17%);
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    
+    #isp{
+        color: hsl(0, 0%, 17%);
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    
+    
+    .map-container{
+        height: 70%;
+        width: 100%
+    }
+    
+
+}
