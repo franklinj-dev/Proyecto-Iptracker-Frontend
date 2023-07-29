@@ -9,9 +9,27 @@ const svg = document.querySelector(".o");
 const inputIP = document.getElementById('input-ip');
 const btnIP = document.getElementById('btnIP');
 
-let map;
+
+
 let iconMark;
 let marker;
+
+
+    let map = L.map('map').setView([51.505, -0.09],15);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map);
+    
+
+                    iconMark = L.icon({
+
+                    iconUrl: 'img/icon-location.svg',
+
+                    });
+                    
+marker = L.marker([51.505, -0.09], {icon: iconMark}).addTo(map)
+
 
 function ValidateIPaddress(event)
  {
@@ -27,9 +45,10 @@ function ValidateIPaddress(event)
             locationip.innerText = "";
             timezone.innerText = "";
             isp.innerText = "";
+            console.log(map)
         }
         
-        console.log(event)
+     
         
         const geoAPI = async (url) => {
             modal.style.display = "block";
@@ -39,7 +58,7 @@ function ValidateIPaddress(event)
             return resultData;
         }
     
-        geoAPI(`https://geo.ipify.org/api/v2/country,city?apiKey=at_7YNnrt5gTvVQniS4ncpyp4h3tO9zb&ipAddress=${inputIP.value}`)
+        geoAPI(`https://geo.ipify.org/api/v2/country,city?apiKey=at_6CiMNDVUqOpe3xp0K9w0tJ2XQkMis&ipAddress=${inputIP.value}`)
             .then((res) => {
             
                 modal.style.display = "none";
@@ -62,7 +81,7 @@ function ValidateIPaddress(event)
                     maxZoom: 19,
                     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 }).addTo(map);
-                
+                console.log(map)
             })
             .catch((err) => console.log(err));
     
